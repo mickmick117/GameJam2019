@@ -7,10 +7,15 @@ public class AppearanceTrigger : MonoBehaviour
     public bool isTrigger = false;
     public GameObject monster;
     public Light light;
+    public GameObject trigger2;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(trigger2 != null)
+        {
+            trigger2.SetActive(false);
+        }
         monster.SetActive(false);
     }
 
@@ -25,6 +30,10 @@ public class AppearanceTrigger : MonoBehaviour
         if (!isTrigger)
         {
             isTrigger = true;
+            if (trigger2 != null)
+            {
+                trigger2.SetActive(true);
+            }
             light.enabled = false;
             GetComponent<AudioSource>().Play();
             monster.SetActive(true);
