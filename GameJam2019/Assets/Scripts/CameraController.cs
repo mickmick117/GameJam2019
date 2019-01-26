@@ -11,8 +11,9 @@ public class CameraController : MonoBehaviour
 	public GameObject character;
 
 	private Vector2 mouseDirection;
+	public float md;
 
-    void Update()
+	void Update()
     {
 		MoveCamera();
 	}
@@ -24,9 +25,13 @@ public class CameraController : MonoBehaviour
 
 		smoothV.x = Mathf.Lerp(smoothV.x, mouseDirection.x, 1f / smoothing);
 		smoothV.y = Mathf.Lerp(smoothV.y, mouseDirection.y, 1f / smoothing);
-		mouseLook += smoothV;
+		mouseLook += smoothV;		
 
-		transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
+		if (Mathf.Abs(-mouseLook.y) <= 90)
+		{
+			transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
+		}
+
 		character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
 	}
 }
