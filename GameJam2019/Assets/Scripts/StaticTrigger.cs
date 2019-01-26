@@ -5,24 +5,34 @@ using UnityEngine;
 
 public class StaticTrigger : MonoBehaviour
 {
-    public string displayText;
+    public string UnlockText;
+    public string LockText;
     public Text prompt;
 
     bool isEnter = false;
 
     public Animator anim;
 
-    Inventory inv;
+    public int numInvToWin;
+
+    private Inventory inv;
 
     void OnTriggerEnter(Collider hit)
     {
-        if(inv.itemKeys.Count == )
-
-        if (anim.GetBool("open") == false)
+        if( inv != null && inv.itemKeys.Count >= numInvToWin)
         {
-            prompt.text = displayText;
-            isEnter = true;
+            if (anim.GetBool("open") == false)
+            {
+                prompt.text = UnlockText;
+                isEnter = true;
+            }
         }
+        else
+        {
+            prompt.text = "You need " + LockText;
+        }
+
+
     }
 
     void OnTriggerExit(Collider hit)
