@@ -6,7 +6,6 @@ using UnityEngine;
 public class StaticTrigger : MonoBehaviour
 {
     public string UnlockText;
-    public string LockText;
     public Text prompt;
 
     bool isEnter = false;
@@ -33,26 +32,22 @@ public class StaticTrigger : MonoBehaviour
                     }
                 }
             }
-            else if(door.tag == "SilverKey")
+            else if(true/*inv.itemKeys.Contains(door.tag)*/)
             {
-                if (/*inv.itemKeys.Contains("SilverKey")*/)
+                if (anim.GetBool("open") == false)
                 {
-                    if (anim.GetBool("open") == false)
-                    {
-                        prompt.text = UnlockText;
-                        isEnter = true;
-                    }
-                }
-                else
-                {
-                    prompt.text = "You need " + LockText;
+                    prompt.text = UnlockText;
+                    isEnter = true;
                 }
             }
-            
+            else
+            {
+                prompt.text = "You need " + door.tag + " item to open this door";
+            }           
         }
         else
         {
-            prompt.text = "You need " + LockText;
+            prompt.text = "Inventory is NULL";
         }
 
 
