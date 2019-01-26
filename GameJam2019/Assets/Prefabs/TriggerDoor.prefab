@@ -141,9 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 084e4655283e37749afc2aca8651773f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayText: asdf
+  UnlockText: Press E to open
+  LockText: what you need
   prompt: {fileID: 0}
   anim: {fileID: 7691507149869995681}
+  numInvToWin: 6
 --- !u!1 &7691507149869995680
 GameObject:
   m_ObjectHideFlags: 0
