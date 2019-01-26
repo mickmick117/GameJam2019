@@ -12,8 +12,12 @@ public class StaticTrigger : MonoBehaviour
 
     public Animator anim;
 
+    Inventory inv;
+
     void OnTriggerEnter(Collider hit)
     {
+
+
         if (anim.GetBool("open") == false)
         {
             prompt.text = displayText;
@@ -29,7 +33,7 @@ public class StaticTrigger : MonoBehaviour
 
     void Start()
     {
-
+        inv = Inventory.instance;
     }
 
     void Update()
