@@ -7,6 +7,7 @@ public class CharacterController : MonoBehaviour
 	public float speed = 10.0f;
 	private float translation = 0f;
 	private float walking = 0f;
+    public bool isWalking = false;
 
     void Start()
     {
@@ -23,7 +24,18 @@ public class CharacterController : MonoBehaviour
 		walking = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 		transform.Translate(walking, 0, translation);
 
-		if (Input.GetKeyDown("escape"))
+        if ((translation != 0 || walking != 0) && !isWalking)
+        {
+            isWalking = true;
+            GetComponent<AudioSource>().Play();
+        }
+        else if (translation == 0 && walking == 0)
+        {
+            GetComponent<AudioSource>().Stop();
+            isWalking = false;
+        }
+
+        if (Input.GetKeyDown("escape"))
 		{
 			Cursor.lockState = CursorLockMode.None;
 		}
