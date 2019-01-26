@@ -33,7 +33,7 @@ public class TriggerController : MonoBehaviour
         objectIsActive = true;
         
         rend.material.SetFloat("_Outline", outlineValue);
-        rend.material.SetVector("_OutlineColor", new Vector4(255.0f, 181.0f, 0.0f, 255.0f));
+        //rend.material.SetVector("_OutlineColor", new Vector4(255.0f, 181.0f, 0.0f, 255.0f));
     }
 
     private void OnTriggerExit(Collider other)
