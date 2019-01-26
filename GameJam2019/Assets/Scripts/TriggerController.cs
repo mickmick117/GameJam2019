@@ -10,7 +10,8 @@ public class TriggerController : MonoBehaviour
     public int keyID;
     public string textToShow;
     bool objectIsActive = false;
-
+    public Renderer rend;
+    public float outlineValue;
 
     private void Start()
     {
@@ -30,11 +31,13 @@ public class TriggerController : MonoBehaviour
     {
         txt.gameObject.SetActive(true);
         objectIsActive = true;
+        rend.material.SetFloat("_Outline", outlineValue);
     }
 
     private void OnTriggerExit(Collider other)
     {
         txt.gameObject.SetActive(false);
         objectIsActive = false;
+        rend.material.SetFloat("_Outline", 0.0f);
     }
 }
