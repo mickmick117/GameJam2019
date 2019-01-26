@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 4882855181036141366}
   - component: {fileID: 4882855181036141369}
   m_Layer: 0
-  m_Name: InteractableKey
+  m_Name: InteractableSilverKey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
