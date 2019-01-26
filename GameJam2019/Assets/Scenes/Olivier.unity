@@ -492,8 +492,92 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8358763999543345671, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: prompt
+      value: 
+      objectReference: {fileID: 599354081}
+    - target: {fileID: 8358763999543345671, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: UnlockText
+      value: Press E to open door
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358763999543345671, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: LockText
+      value: more items to unlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358763999543345671, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: numInvToWin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358763998983928192, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: prompt
+      value: 
+      objectReference: {fileID: 599354081}
+    - target: {fileID: 8358763998983928192, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: UnlockText
+      value: unlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358763998983928192, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: LockText
+      value: lock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358763998923462759, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: prompt
+      value: 
+      objectReference: {fileID: 599354081}
+    - target: {fileID: 8358763998923462759, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: UnlockText
+      value: unlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358763998923462759, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: LockText
+      value: lock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358763999560111772, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: prompt
+      value: 
+      objectReference: {fileID: 599354081}
+    - target: {fileID: 8358763999560111772, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: UnlockText
+      value: unlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358763999560111772, guid: cdd7a720d74ab7b4b9e82317855e36a6,
+        type: 3}
+      propertyPath: LockText
+      value: lock
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdd7a720d74ab7b4b9e82317855e36a6, type: 3}
+--- !u!1 &866423329 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1213944927934844064, guid: a3771ce463f360140b797fedb6b3acc3,
+    type: 3}
+  m_PrefabInstance: {fileID: 11396519}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &866423337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866423329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17d407f8dc0eb141b3d0054fb51df03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemKeys: 
 --- !u!1 &1511164138
 GameObject:
   m_ObjectHideFlags: 0
