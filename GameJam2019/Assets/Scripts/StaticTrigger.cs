@@ -14,18 +14,41 @@ public class StaticTrigger : MonoBehaviour
     public Animator anim;
 
     public int numInvToWin;
+    public GameObject door;
 
     private Inventory inv;
 
     void OnTriggerEnter(Collider hit)
     {
-        if( inv != null && inv.itemKeys.Count >= numInvToWin)
+        if( inv != null)
         {
-            if (anim.GetBool("open") == false)
+            if(door.tag == "all")
             {
-                prompt.text = UnlockText;
-                isEnter = true;
+                if(inv.itemKeys.Count >= numInvToWin)
+                {
+                    if (anim.GetBool("open") == false)
+                    {
+                        prompt.text = UnlockText;
+                        isEnter = true;
+                    }
+                }
             }
+            else if(door.tag == "SilverKey")
+            {
+                if (/*inv.itemKeys.Contains("SilverKey")*/)
+                {
+                    if (anim.GetBool("open") == false)
+                    {
+                        prompt.text = UnlockText;
+                        isEnter = true;
+                    }
+                }
+                else
+                {
+                    prompt.text = "You need " + LockText;
+                }
+            }
+            
         }
         else
         {
