@@ -8,6 +8,7 @@ TagManager:
   - SilverKey
   - LightGreyKey
   - GoldKey
+  - Knife
   layers:
   - Default
   - TransparentFX
