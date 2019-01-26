@@ -11,7 +11,8 @@ public class dolly : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		currentfov = GetComponent<Camera>().fieldOfView;
+        this.GetComponent<Animation>().Play();
+        currentfov = GetComponent<Camera>().fieldOfView;
 		StartCoroutine(dollyzoom());
 	}
 
