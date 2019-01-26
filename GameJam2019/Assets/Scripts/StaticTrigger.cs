@@ -9,13 +9,12 @@ public class StaticTrigger : MonoBehaviour
     public Text prompt;
 
     bool isEnter = false;
-    bool isOpen = false;
 
     public Animator anim;
 
     void OnTriggerEnter(Collider hit)
     {
-        if (!isOpen)
+        if (anim.GetBool("open") == false)
         {
             prompt.text = displayText;
             isEnter = true;
@@ -44,8 +43,6 @@ public class StaticTrigger : MonoBehaviour
     void OpenDoor()
     {
         anim.SetBool("open", true);
-
-        isOpen = true;
         prompt.text = "";
     }
 }
