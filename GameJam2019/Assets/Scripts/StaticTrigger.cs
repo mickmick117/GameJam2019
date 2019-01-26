@@ -12,45 +12,13 @@ public class StaticTrigger : MonoBehaviour
 
     public Animator anim;
 
-    public int numInvToWin;
-    public GameObject door;
-
-    private Inventory inv;
-
     void OnTriggerEnter(Collider hit)
     {
-        if( inv != null)
+        if (anim.GetBool("open") == false)
         {
-            if(door.tag == "all")
-            {
-                if(inv.itemKeys.Count >= numInvToWin)
-                {
-                    if (anim.GetBool("open") == false)
-                    {
-                        prompt.text = UnlockText;
-                        isEnter = true;
-                    }
-                }
-            }
-            else if(true/*inv.itemKeys.Contains(door.tag)*/)
-            {
-                if (anim.GetBool("open") == false)
-                {
-                    prompt.text = UnlockText;
-                    isEnter = true;
-                }
-            }
-            else
-            {
-                prompt.text = "You need " + door.tag + " item to open this door";
-            }           
+            prompt.text = UnlockText;
+            isEnter = true;
         }
-        else
-        {
-            prompt.text = "Inventory is NULL";
-        }
-
-
     }
 
     void OnTriggerExit(Collider hit)
@@ -61,7 +29,7 @@ public class StaticTrigger : MonoBehaviour
 
     void Start()
     {
-        inv = Inventory.instance;
+        
     }
 
     void Update()
