@@ -32,4 +32,9 @@ public class Inventory : MonoBehaviour
     {
         itemKeys.Add(keyID);
     }
+
+    public void addItem(string tag)
+    {
+        // TODO: itemKeys === itemTags
+    }
 }
