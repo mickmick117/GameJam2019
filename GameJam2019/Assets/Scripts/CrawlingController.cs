@@ -22,6 +22,7 @@ public class CrawlingController : MonoBehaviour
 		character.SetActive(true);
 		crawlingAnimator.SetBool("Start", true);
 		StartCoroutine(CrawlingThread());
+		StartCoroutine(PlaySound());
 	}
 
 	IEnumerator CrawlingThread ()
@@ -33,6 +34,12 @@ public class CrawlingController : MonoBehaviour
 			yield return null;
 		}
 		character.SetActive(false);
+	}
+
+	IEnumerator PlaySound ()
+	{
+		yield return new WaitForSeconds(soundDelay);
+		GetComponent<AudioSource>().Play();
 	}
 
 	private void OnTriggerEnter(Collider other)
