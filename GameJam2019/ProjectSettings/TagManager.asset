@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Flashlight
+  - SilverKey
+  - LightGreyKey
+  - GoldKey
   layers:
   - Default
   - TransparentFX
