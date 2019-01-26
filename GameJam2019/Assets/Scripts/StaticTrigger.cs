@@ -12,12 +12,13 @@ public class StaticTrigger : MonoBehaviour
 
     public Animator anim;
 
-    private Animator RealAnim;
-
     void OnTriggerEnter(Collider hit)
     {
-        prompt.text = displayText;
-        isEnter = true;
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            prompt.text = displayText;
+            isEnter = true;
+        }
     }
 
     void OnTriggerExit(Collider hit)
@@ -27,22 +28,22 @@ public class StaticTrigger : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && isEnter)
         {
-            RealAnim = anim;
             OpenDoor();
         }
     }
 
     void OpenDoor()
     {
-        RealAnim.SetBool("open", true);
+        anim.SetBool("open", true);
 
+        
         prompt.text = "";
         isEnter = false;
     }
