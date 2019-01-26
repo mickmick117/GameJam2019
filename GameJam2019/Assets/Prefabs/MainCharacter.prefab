@@ -43,8 +43,8 @@ Light:
   m_Type: 0
   m_Color: {r: 1, g: 0.9683523, b: 0.7122642, a: 1}
   m_Intensity: 1
-  m_Range: 65
-  m_SpotAngle: 23
+  m_Range: 90
+  m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -126,7 +126,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 60
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 1213944927934844069}
   - component: {fileID: 1213944927934844070}
   - component: {fileID: 1213944927934844122}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94883d54b7a2fbe40996078320ddfbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
 --- !u!1 &1213944928162142797
 GameObject:
   m_ObjectHideFlags: 0
