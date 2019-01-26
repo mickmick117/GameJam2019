@@ -8,19 +8,25 @@ public class CrawlingController : MonoBehaviour
 	public Animator crawlingAnimator;
 	public Transform destination;
 
-    void Start()
-    {
-        
-    }
 
-    void Update()
-    {
-		//pMenu.transform.position = Vector3.MoveTowards(pMenu.transform.position, endPosition, speed * Time.deltaTime);
+	private void Start()
+	{
+		StartCrawling();
 	}
 
 	public void StartCrawling()
 	{
 		crawlingAnimator.SetBool("Start", true);
-		transform.position = Vector3.MoveTowards(transform.position, destination.position, speed * Time.deltaTime);
+		StartCoroutine(CrawlingThread());
+	}
+
+	IEnumerator CrawlingThread ()
+	{
+		yield return new WaitForSeconds(1);
+		while (transform.position != destination.position)
+		{
+			transform.position = Vector3.MoveTowards(transform.position, destination.position, speed * Time.deltaTime);
+			yield return null;
+		}
 	}
 }
