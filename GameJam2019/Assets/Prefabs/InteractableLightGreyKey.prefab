@@ -218,7 +218,7 @@ MonoBehaviour:
   triggerEnterPrompt: Press "E" to pickup item
   objectRenderer: {fileID: 680683927733806420, guid: 5948ae6d8700f6748a0d585c88cd9aa5,
     type: 3}
-  outlineValue: 0.01
+  outlineValue: 0.02
 --- !u!135 &3968928645618714090
 SphereCollider:
   m_ObjectHideFlags: 0
