@@ -7,26 +7,40 @@ public class CrawlingController : MonoBehaviour
 	public float speed = 5;
 	public Animator crawlingAnimator;
 	public Transform destination;
+	public GameObject character;
+	public bool isTrigger = false;
+	public float soundDelay;
 
 
 	private void Start()
 	{
-		StartCrawling();
+		character.SetActive(false);
 	}
 
 	public void StartCrawling()
 	{
+		character.SetActive(true);
 		crawlingAnimator.SetBool("Start", true);
 		StartCoroutine(CrawlingThread());
 	}
 
 	IEnumerator CrawlingThread ()
 	{
-		yield return new WaitForSeconds(1);
-		while (transform.position != destination.position)
+		//yield return new WaitForSeconds(1);
+		while ( Vector3.Distance(character.transform.position, destination.position) > 0.1f)
 		{
-			transform.position = Vector3.MoveTowards(transform.position, destination.position, speed * Time.deltaTime);
+			character.transform.position = Vector3.MoveTowards(character.transform.position, destination.position, speed * Time.deltaTime);
 			yield return null;
 		}
+		character.SetActive(false);
+	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		if (!isTrigger)
+		{
+			isTrigger = true;
+			StartCrawling();
+		}		
 	}
 }
