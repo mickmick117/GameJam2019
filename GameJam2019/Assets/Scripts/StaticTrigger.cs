@@ -16,7 +16,7 @@ public class StaticTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider hit)
     {
-
+        if(inv.itemKeys.Count == )
 
         if (anim.GetBool("open") == false)
         {
