@@ -1,32 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class StaticTrigger : MonoBehaviour
 {
-    bool hasCollided = false;
-    public string referencetotext;
+    public string displayText;
+    public Text prompt;
+
+    bool isEnter = false;
+
+    public Animator anim;
+
+    private Animator RealAnim;
 
     void OnTriggerEnter(Collider hit)
     {
-        referencetotext = "Necesito mas comida";
+        prompt.text = displayText;
+        isEnter = true;
     }
 
     void OnTriggerExit(Collider hit)
     {
-        referencetotext = "";
-        hasCollided = false;
+        prompt.text = "";
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E) && isEnter)
+        {
+            RealAnim = anim;
+            OpenDoor();
+        }
+    }
+
+    void OpenDoor()
+    {
+        RealAnim.SetBool("open", true);
+
+        prompt.text = "";
+        isEnter = false;
     }
 }
