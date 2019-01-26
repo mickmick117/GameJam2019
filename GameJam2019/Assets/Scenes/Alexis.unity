@@ -161,6 +161,9 @@ MonoBehaviour:
   sensitivity: 1
   smoothing: 3
   character: {fileID: 1285470741}
+  flashLight: {fileID: 1489390086}
+  delay: 0.5
+  speed: 5
   md: 0
 --- !u!81 &93931227
 AudioListener:
@@ -247,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  isWalking: 0
 --- !u!54 &1285470743
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -567,72 +571,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &7988469021559582168
+--- !u!1001 &3945598884604892012
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7988469021272385565, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957225, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_Name
-      value: InteractableObject
+      value: InteractableFlashlight
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7988469021272385566, guid: 897c802d466349e49aaeeeb96937c11d,
+    - target: {fileID: 3945598884862957226, guid: 5d007b3a3df8b8c43a0686b97963f4bd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 897c802d466349e49aaeeeb96937c11d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 5d007b3a3df8b8c43a0686b97963f4bd, type: 3}
