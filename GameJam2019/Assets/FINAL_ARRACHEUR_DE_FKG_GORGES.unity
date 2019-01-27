@@ -214,5 +214,85 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e329762f463f2bb45abfa00b3f825feb, type: 2}
+    - target: {fileID: 1223591174029479342, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2830681397632092574, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781196124423402111, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8600846970517055016, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576160553384028545, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3683642092343301095, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328891135352332226, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293880701640022380, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1876831996575654668, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1940253866516887250, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442490819167908613, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442490819732539522, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7442490819957303653, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189906361413034880, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6189906361413034883, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: UnlockText
+      value: ' down E to burn it down'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8849634045967654589, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dac0269fd66152d42b15983e0d3b89aa, type: 3}
