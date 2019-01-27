@@ -14,7 +14,7 @@ public class CharacterController : MonoBehaviour
 
     void Start()
     {
-       // Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
         inventoryMenu.SetActive(false);
         pauseMenu.SetActive(false);
     }
