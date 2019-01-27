@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenTrap : MonoBehaviour
+public class Open : MonoBehaviour
 {
-    Light light;
+    public Light light;
 
     // Start is called before the first frame update
     void Start()
