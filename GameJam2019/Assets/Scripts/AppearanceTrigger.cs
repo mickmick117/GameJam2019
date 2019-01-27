@@ -27,7 +27,7 @@ public class AppearanceTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isTrigger)
+        if (!isTrigger && Inventory.instance.items.Count == 6)
         {
             isTrigger = true;
             if (trigger2 != null)

@@ -6,6 +6,7 @@ public class InteractiveChest : MonoBehaviour
     public GameObject chestToOpen;
     public Text triggerEnterText;
     public string triggerEnterPrompt;
+    public string triggerCantEnterPrompt;
     public Renderer objectRenderer;
 
     private bool isPlayerInRange;
@@ -45,6 +46,7 @@ public class InteractiveChest : MonoBehaviour
     private bool TogglePlayerRangePrompt()
     {
         bool isActiveAndInRange = isPlayerInRange && chestToOpen.activeSelf && objectRenderer.isVisible && Inventory.instance.items.Count == 6;
+
 
         triggerEnterText.text = (isActiveAndInRange) ? triggerEnterPrompt : "";
 
