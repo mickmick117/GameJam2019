@@ -13,9 +13,21 @@ public class FireOn : MonoBehaviour
     public GameObject f;
     public GameObject parent;
 
+    public string NeedLighterString;
+
+    Inventory inv;
+
     void OnTriggerEnter(Collider hit)
     {
-        prompt.text = UnlockText;
+        if (inv.items.Contains("Fire"))
+        {
+            prompt.text = UnlockText;
+        }
+        else
+        {
+            prompt.text = NeedLighterString;
+        }
+        
         isEnter = true;
     }
 
@@ -46,13 +58,13 @@ public class FireOn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        inv = Inventory.instance;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isEnter)
+        if (Input.GetKeyDown(KeyCode.E) && isEnter && inv.items.Contains("Fire"))
         {
             activateFire();
         }
