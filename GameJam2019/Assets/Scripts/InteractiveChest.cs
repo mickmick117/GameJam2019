@@ -28,6 +28,7 @@ public class InteractiveChest : MonoBehaviour
                 chestToOpen.SetActive(false);
                 TogglePlayerRangePrompt();
                 GameManager.instance.OpenFinalRoom();
+                GetComponent<AudioSource>().Play();
             }
         }
     }
