@@ -429,6 +429,7 @@ MonoBehaviour:
   - {fileID: 8967759100300913801}
   - {fileID: 8967759099377688810}
   - {fileID: 8967759098351628677}
+  objectives: {fileID: 8967759099225068264}
 --- !u!1 &8967759098940093299
 GameObject:
   m_ObjectHideFlags: 0
