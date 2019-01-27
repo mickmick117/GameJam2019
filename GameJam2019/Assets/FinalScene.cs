@@ -6,6 +6,8 @@ public class FinalScene : MonoBehaviour
 {
 
 	public List<Light> lights;
+	public Light light;
+
 	public Transform target;
 	public Transform character;
 	public Color finalLightsColor;
@@ -17,19 +19,27 @@ public class FinalScene : MonoBehaviour
 	private bool isFinished = false;
 	private const float marge = 3;
 
+	private float iniIntensity;
+	private float iniRange;
+	public float multiplier = 25;
+
 	private void Start()
 	{
 		initialDistance = Vector3.Distance(character.position, target.position);
 		initialLightsColor = lights[0].color;
+
+		iniIntensity = light.intensity;
+		iniRange = light.range;
 	}
 
 	void Update()
     {
-		if (isEntered && !isFinished)
+		if (isEntered )
 		{
 			ChangeLight();
 		}
-		else if (isFinished)
+
+		if (isFinished)
 		{
 
 		}
@@ -39,11 +49,14 @@ public class FinalScene : MonoBehaviour
 	{
 		 newDistance = Vector3.Distance(character.position, target.position);
 
-		for (int i = 0; i < lights.Count; i++)
+		/*for (int i = 0; i < lights.Count; i++)
 		{
 			lights[i].color = Color.Lerp(finalLightsColor, initialLightsColor, newDistance / (initialDistance-marge));
 			lights[i].intensity = (initialDistance - newDistance) / (initialDistance - marge) * 100;
-		}
+		}*/
+
+		light.intensity = iniIntensity + (initialDistance - newDistance) / (initialDistance - marge) * multiplier;
+		light.range = iniRange + (initialDistance - newDistance) / (initialDistance - marge) * multiplier;
 
 		if (newDistance < marge)
 		{
