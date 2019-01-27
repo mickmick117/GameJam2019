@@ -29,6 +29,7 @@ public class InteractiveController : MonoBehaviour
                 Debug.Log(Inventory.instance.items.Count);
                 objectToPickup.SetActive(false);
                 TogglePlayerRangePrompt();
+                GetComponent<AudioSource>().Play();
                 if (light != null)
                 {
                     light.gameObject.SetActive(true);
