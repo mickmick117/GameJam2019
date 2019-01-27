@@ -7,6 +7,7 @@ public class PauseMenuController : MonoBehaviour
     public void Resume()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         Time.timeScale = 1.0f;
         pauseMenu.SetActive(false);
     }
