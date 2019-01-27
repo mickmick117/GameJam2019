@@ -15,7 +15,7 @@ public class evalFinalWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inv.itemKeys.Count >= maxInv)
+        if (inv.items.Count >= maxInv)
         {
             this.gameObject.SetActive(false);
         }
