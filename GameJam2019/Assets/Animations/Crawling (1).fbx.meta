@@ -142,7 +142,22 @@ ModelImporter:
     13700000: ZombieGirl_Body
     13700002: ZombieGirl_Pants
     13700004: ZombieGirl_Top
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: zombie_diffuse
+    second: {fileID: 2800000, guid: a1d50871fb0937447b609428bedcb70d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: zombie_normal
+    second: {fileID: 2800000, guid: 52f2b89c9cbe64947815ef0c43bfd436, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: zombie_specular
+    second: {fileID: 2800000, guid: cb5639070f33d684a91d845ce68caa40, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
