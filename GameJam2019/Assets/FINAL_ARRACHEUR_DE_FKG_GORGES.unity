@@ -289,6 +289,11 @@ PrefabInstance:
       propertyPath: UnlockText
       value: ' down E to burn it down'
       objectReference: {fileID: 0}
+    - target: {fileID: 6189906361413034883, guid: dac0269fd66152d42b15983e0d3b89aa,
+        type: 3}
+      propertyPath: NeedLighterString
+      value: Need to burn this up!
+      objectReference: {fileID: 0}
     - target: {fileID: 8849634045967654589, guid: dac0269fd66152d42b15983e0d3b89aa,
         type: 3}
       propertyPath: m_Text
