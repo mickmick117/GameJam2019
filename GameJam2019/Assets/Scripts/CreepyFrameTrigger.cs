@@ -34,12 +34,12 @@ public class CreepyFrameTrigger : MonoBehaviour
             if (rotatesLeft)
             {
                 rotatesLeft = false;
-                rendoror.transform.Rotate(new Vector3(1, 0, 0) * 5);
+                rendoror.transform.Rotate(new Vector3(1, 0, 0) * 8);
             }
             else
             {
                 rotatesLeft = true;
-                rendoror.transform.Rotate(new Vector3(-1, 0, 0) * 5);
+                rendoror.transform.Rotate(new Vector3(-1, 0, 0) * 8);
             }
 
             if (timeleft < 1.0f)

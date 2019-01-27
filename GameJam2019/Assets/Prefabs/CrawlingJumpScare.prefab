@@ -123,7 +123,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: db939e896293df5418d1e21bd2f45bc4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 867ef557453d318429d90a2694597bbf, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -548,10 +548,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crawling (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: 08b8c693466b0c843bf55492714e2bb7, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 23a745c59136ea048b8dfae58844ec0e, type: 2}
     - target: {fileID: 400000, guid: 08b8c693466b0c843bf55492714e2bb7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.28
@@ -636,6 +632,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 08b8c693466b0c843bf55492714e2bb7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 23a745c59136ea048b8dfae58844ec0e, type: 2}
     - target: {fileID: 13700000, guid: 08b8c693466b0c843bf55492714e2bb7, type: 3}
       propertyPath: m_Bones.Array.data[0]
       value: 
