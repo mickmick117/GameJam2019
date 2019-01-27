@@ -7,22 +7,14 @@ public class CreepyFrameTrigger : MonoBehaviour
 {
     public Renderer rendoror;
     private bool isTriggering = false;
-    private float timeleft = 3.0f;
-    private bool rotatesLeft = false;
-
-    private bool isSimonaquementBruyant = false;
+    private float timeleft = 300.0f; 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isSimonaquementBruyant)
-        {
-            isSimonaquementBruyant = true;
-            GetComponent<AudioSource>().Play();
-        }
-
         if (timeleft > 0)
         {
             isTriggering = true;
+            // TODO: make the frame shake
         }
     }
 
@@ -31,15 +23,13 @@ public class CreepyFrameTrigger : MonoBehaviour
         if(isTriggering)
         {
             timeleft -= Time.deltaTime;
-            if (rotatesLeft)
+            if (timeleft % 2 == 0)
             {
-                rotatesLeft = false;
-                rendoror.transform.Rotate(new Vector3(1, 0, 0) * 5);
+                rendoror.transform.Rotate(new Vector3(1, 0, 0));
             }
             else
             {
-                rotatesLeft = true;
-                rendoror.transform.Rotate(new Vector3(-1, 0, 0) * 5);
+                rendoror.transform.Rotate(new Vector3(-1, 0, 0));
             }
                 
             if (timeleft < 1.0f)
