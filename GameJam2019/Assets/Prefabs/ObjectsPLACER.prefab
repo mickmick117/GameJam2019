@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 141717186096364776}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.04, y: -8.01, z: -7.9}
+  m_LocalRotation: {x: 0, y: 0.2890318, z: 0, w: 0.9573195}
+  m_LocalPosition: {x: 32.1, y: -10.4, z: -19.36}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7236505603367943025}
@@ -36,7 +36,7 @@ Transform:
   - {fileID: 6525842715705014076}
   m_Father: {fileID: 2269184252344357612}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 33.6, z: 0}
 --- !u!33 &141717186096364788
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -464,8 +464,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714963951571896853}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: -17, z: 12.3}
+  m_LocalRotation: {x: 0, y: 0.27118838, z: 0, w: 0.9625263}
+  m_LocalPosition: {x: 0, y: -17, z: 12.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 714963951820251762}
@@ -473,7 +473,7 @@ Transform:
   - {fileID: 714963951692513968}
   m_Father: {fileID: 2269184252344357612}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 31.47, z: 0}
 --- !u!114 &714963951571896855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,7 +490,7 @@ MonoBehaviour:
   triggerEnterText: {fileID: 714963952284004241}
   triggerEnterPrompt: Press "E" to pickup item
   objectRenderer: {fileID: 6537775422941728397}
-  outlineValue: 0.02
+  outlineValue: 0.04
   light: {fileID: 0}
 --- !u!135 &714963951571896852
 SphereCollider:
@@ -1362,7 +1362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2269184252344357612}
   m_Layer: 0
-  m_Name: Objects 1
+  m_Name: ObjectsPLACER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1783,7 +1783,7 @@ MonoBehaviour:
   triggerEnterText: {fileID: 2375996094320061214}
   triggerEnterPrompt: Press "E" to pickup item
   objectRenderer: {fileID: 4846324836805111571}
-  outlineValue: 0.02
+  outlineValue: 0.04
   light: {fileID: 0}
 --- !u!1 &2369233687574619887
 GameObject:
@@ -3756,7 +3756,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6537775422941728395}
   m_LocalRotation: {x: 0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -0.32316, y: 0, z: 0}
+  m_LocalPosition: {x: -0.192, y: 0, z: -0.214}
   m_LocalScale: {x: 0.14491126, y: 0.14491126, z: 0.14491126}
   m_Children: []
   m_Father: {fileID: 714963951571896854}
@@ -3834,7 +3834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7966414843319426734}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.13, y: 0, z: 0}
   m_LocalScale: {x: 0.14018704, y: 0.50817794, z: 0.14303419}
   m_Children:
   - {fileID: 3578587202326858204}
