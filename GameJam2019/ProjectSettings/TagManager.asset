@@ -10,6 +10,8 @@ TagManager:
   - GoldKey
   - Knife
   - Fire
+  - JackInABox
+  - Letter
   layers:
   - Default
   - TransparentFX
