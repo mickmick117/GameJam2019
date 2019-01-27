@@ -13,6 +13,8 @@ public class FireOn : MonoBehaviour
     public GameObject f;
     public GameObject parent;
 
+    Inventory inv;
+
     void OnTriggerEnter(Collider hit)
     {
         prompt.text = UnlockText;
@@ -46,13 +48,13 @@ public class FireOn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        inv = Inventory.instance;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isEnter)
+        if (Input.GetKeyDown(KeyCode.E) && isEnter && inv.items.Contains("Fire"))
         {
             activateFire();
         }
