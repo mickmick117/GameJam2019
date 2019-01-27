@@ -11,8 +11,7 @@ public class FireOn : MonoBehaviour
     bool isEnter = false;
 
     public GameObject f;
-    public GameObject meuble1;
-    public GameObject meuble2;
+    public GameObject parent;
 
     void OnTriggerEnter(Collider hit)
     {
@@ -37,12 +36,10 @@ public class FireOn : MonoBehaviour
     {
         yield return new WaitForSeconds(0.25f);
         f.SetActive(true);
-        yield return new WaitForSeconds(5.0f);
-        
-        //meuble1.SetActive(false);
-        //meuble2.SetActive(false);
+        yield return new WaitForSeconds(7.0f);
         f.SetActive(false);
-        this.gameObject.SetActive(false);
+
+        parent.gameObject.SetActive(false);
 
     }
 
