@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class InteractiveController : MonoBehaviour
@@ -10,6 +12,11 @@ public class InteractiveController : MonoBehaviour
     public float outlineValue;
     public Light light;
 
+    public Text StoryTextObj;
+    private string StoryText = "Press R to investigate";
+    public float TextShowTime = 4f;
+
+    static bool investigateTip = false;
     private bool isPlayerInRange;
 
     // Start is called before the first frame update
@@ -34,8 +41,33 @@ public class InteractiveController : MonoBehaviour
                 {
                     light.gameObject.SetActive(true);
                 }
+                if (!investigateTip && !CompareTag("Flashlight"))
+
+                {
+
+                    investigateTip = true;
+
+                    StartCoroutine(ShowText());
+
+                }
             }
         }
+    }
+
+    public IEnumerator ShowText()
+
+    {
+
+        StoryTextObj.text = StoryText;
+
+        yield return new WaitForSeconds(TextShowTime);
+
+        StoryTextObj.text = "";
+
+
+
+
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -60,3 +92,4 @@ public class InteractiveController : MonoBehaviour
         return isActiveAndInRange;
     }
 }
+
