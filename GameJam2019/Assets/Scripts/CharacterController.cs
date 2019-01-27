@@ -10,17 +10,21 @@ public class CharacterController : MonoBehaviour
     public bool isWalking = false;
     public GameObject inventoryMenu;
     public GameObject pauseMenu;
+	public GameObject MainMenu;
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.lockState = CursorLockMode.Locked;
         inventoryMenu.SetActive(false);
         pauseMenu.SetActive(false);
     }
 
     void Update()
     {
-		DirectionController();
+		if (!MainMenu.activeSelf)
+		{
+			DirectionController();
+		}		
 	}
 
 	public void DirectionController()
