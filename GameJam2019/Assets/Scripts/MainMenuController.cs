@@ -9,8 +9,8 @@ public class MainMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+		Cursor.lockState = CursorLockMode.None;
+	}
 
     // Update is called once per frame
     void Update()
@@ -23,7 +23,8 @@ public class MainMenuController : MonoBehaviour
         // TODO: Fade out sound
         // TODO: Give controls to player
         StartCoroutine(FadeCanvas(menuCanvas, 1f, 0f, fadeOutTime));
-    }
+		Cursor.lockState = CursorLockMode.Locked;
+	}
 
     public void Exit()
     {
@@ -56,5 +57,6 @@ public class MainMenuController : MonoBehaviour
             yield return new WaitForEndOfFrame(); // wait for the next frame before continuing the loop
         }
         canvas.alpha = endAlpha; // force the alpha to the end alpha before finishing – this is here to mitigate any rounding errors, e.g. leaving the alpha at 0.01 instead of 0
-    }
+		gameObject.SetActive(false);
+	}
 }

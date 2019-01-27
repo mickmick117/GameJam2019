@@ -25,6 +25,7 @@ public class FinalScene : MonoBehaviour
 	private float iniIntensity;
 	private float iniRange;
 	public float multiplier = 25;
+	private bool changeScene = false;
 
 	private void Start()
 	{
@@ -62,8 +63,10 @@ public class FinalScene : MonoBehaviour
 
 	IEnumerator FinishGame ()
 	{
+		StartCoroutine(LoadScene(0));
 		yield return StartCoroutine(FadeOut());
-		SceneManager.LoadScene(0);
+		yield return StartCoroutine(PlayText());
+		changeScene = true;
 	}
 
 	IEnumerator FadeOut()
@@ -74,5 +77,30 @@ public class FinalScene : MonoBehaviour
 			yield return null;
 		}
 		
+	}
+
+	IEnumerator PlayText()
+	{
+		// joue ton texte Alexis
+		yield return null;
+	}
+
+	IEnumerator LoadScene(int sceneLevel)
+	{
+		yield return null;
+
+		AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneLevel);
+		asyncOperation.allowSceneActivation = false;
+
+		while (!asyncOperation.isDone)
+		{
+			if (asyncOperation.progress >= 0.9f)
+			{
+				if (changeScene == true)
+					asyncOperation.allowSceneActivation = true;
+			}
+
+			yield return null;
+		}
 	}
 }
