@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestMenu.unity
+    path: Assets/Scenes/Ginger2.unity
     guid: 3faf93302b5298c4b96b1df631701d36
   - enabled: 1
     path: Assets/Scenes/GingerScene.unity
