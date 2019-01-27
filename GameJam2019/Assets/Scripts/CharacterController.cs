@@ -8,11 +8,14 @@ public class CharacterController : MonoBehaviour
 	private float translation = 0f;
 	private float walking = 0f;
     public bool isWalking = false;
+    public GameObject inventoryMenu;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        inventoryMenu.SetActive(false);
     }
+
     void Update()
     {
 		DirectionController();
@@ -43,6 +46,7 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown("r"))
         {
             Cursor.lockState = CursorLockMode.None;
+            inventoryMenu.SetActive(true);
         }
     }
 }
