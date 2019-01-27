@@ -11,6 +11,7 @@ TagManager:
   - Knife
   - Fire
   - JackInABox
+  - Letter
   layers:
   - Default
   - TransparentFX
