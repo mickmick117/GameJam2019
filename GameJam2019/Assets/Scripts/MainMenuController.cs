@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -9,13 +10,16 @@ public class MainMenuController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-		Cursor.lockState = CursorLockMode.None;
+		//Cursor.lockState = CursorLockMode.None;
 	}
 
     // Update is called once per frame
     void Update()
     {
-        
+		if (Input.anyKeyDown) 
+		{
+			Play();
+		}
     }
 
     public void Play()
@@ -23,6 +27,7 @@ public class MainMenuController : MonoBehaviour
         // TODO: Fade out sound
         // TODO: Give controls to player
         StartCoroutine(FadeCanvas(menuCanvas, 1f, 0f, fadeOutTime));
+		//SceneManager.LoadSceneAsync(1);
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
