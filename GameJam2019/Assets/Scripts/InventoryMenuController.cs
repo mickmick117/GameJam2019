@@ -9,6 +9,7 @@ public class InventoryMenuController : MonoBehaviour
     public string[] memoryDescriptions;
     public GameObject inventoryMenu;
     public Button[] memoriesButtons;
+    public Text objectives;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +20,16 @@ public class InventoryMenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inventoryMenu.activeSelf && Inventory.instance != null)
+        if (Inventory.instance != null)
         {
-            // We update the number of items we currently have
-            foreach (Button b in memoriesButtons)
-                b.gameObject.SetActive(Inventory.instance.items.Contains(b.tag));
+            if (inventoryMenu.activeSelf)
+            {
+                // We update the number of items we currently have
+                foreach (Button b in memoriesButtons)
+                    b.gameObject.SetActive(Inventory.instance.items.Contains(b.tag));
+            }
+
+            objectives.text = "Memories acquired: " + Inventory.instance.items.Count;
         }
 
         if (Input.GetKeyDown("r"))
