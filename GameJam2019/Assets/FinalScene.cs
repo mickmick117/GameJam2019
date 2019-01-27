@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FinalScene : MonoBehaviour
 {
@@ -10,8 +12,9 @@ public class FinalScene : MonoBehaviour
 
 	public Transform target;
 	public Transform character;
-	public Color finalLightsColor;
-	private Color initialLightsColor;
+	public CanvasGroup canvas;
+	public float FadeDuration = 1.5f;
+
 	private float initialDistance = 0;
 	public float newDistance = 0;
 
@@ -26,7 +29,6 @@ public class FinalScene : MonoBehaviour
 	private void Start()
 	{
 		initialDistance = Vector3.Distance(character.position, target.position);
-		initialLightsColor = lights[0].color;
 
 		iniIntensity = light.intensity;
 		iniRange = light.range;
@@ -34,38 +36,43 @@ public class FinalScene : MonoBehaviour
 
 	void Update()
     {
-		if (isEntered )
+		if (isEntered && !isFinished )
 		{
 			ChangeLight();
-		}
-
-		if (isFinished)
-		{
-
 		}
     }
 
 	private void ChangeLight()
 	{
 		 newDistance = Vector3.Distance(character.position, target.position);
-
-		/*for (int i = 0; i < lights.Count; i++)
-		{
-			lights[i].color = Color.Lerp(finalLightsColor, initialLightsColor, newDistance / (initialDistance-marge));
-			lights[i].intensity = (initialDistance - newDistance) / (initialDistance - marge) * 100;
-		}*/
-
 		light.intensity = iniIntensity + (initialDistance - newDistance) / (initialDistance - marge) * multiplier;
-		light.range = iniRange + (initialDistance - newDistance) / (initialDistance - marge) * multiplier;
+		light.range = iniRange + (initialDistance - newDistance) / (initialDistance - marge) * multiplier*3;
 
 		if (newDistance < marge)
 		{
 			isFinished = true;
+			StartCoroutine(FinishGame());
 		}
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
 		isEntered = true;
+	}
+
+	IEnumerator FinishGame ()
+	{
+		yield return StartCoroutine(FadeOut());
+		SceneManager.LoadScene(0);
+	}
+
+	IEnumerator FadeOut()
+	{
+		while (canvas.alpha < 1)
+		{
+			canvas.alpha += Time.deltaTime / FadeDuration;
+			yield return null;
+		}
+		
 	}
 }
