@@ -9,6 +9,8 @@ TagManager:
   - LightGreyKey
   - GoldKey
   - Knife
+  - Fire
+  - JackInABox
   layers:
   - Default
   - TransparentFX

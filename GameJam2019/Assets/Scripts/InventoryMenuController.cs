@@ -7,6 +7,8 @@ public class InventoryMenuController : MonoBehaviour
     public Text memoryDescription;
     public Sprite[] memorySprites;
     public string[] memoryDescriptions;
+    public GameObject inventoryMenu;
+    public Button[] memoriesButtons;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +19,18 @@ public class InventoryMenuController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (inventoryMenu.activeSelf && Inventory.instance != null)
+        {
+            // We update the number of items we currently have
+            foreach (Button b in memoriesButtons)
+                b.gameObject.SetActive(Inventory.instance.items.Contains(b.tag));
+        }
+
+        if (Input.GetKeyDown("r"))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            inventoryMenu.SetActive(false);
+        }
     }
 
     public void MemoryClicked(int buttonIndex)

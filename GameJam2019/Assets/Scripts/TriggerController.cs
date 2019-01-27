@@ -23,7 +23,7 @@ public class TriggerController : MonoBehaviour
         if (Input.GetKeyDown("f") && objectIsActive)
         {
             pickupObject.SetActive(false);
-            Inventory.instance.addKey(keyID);
+            //Inventory.instance.addKey(keyID);
         }
     }
 

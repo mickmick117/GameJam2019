@@ -22,11 +22,14 @@ public class CameraController : MonoBehaviour
 	private Vector2 mouseDirection;
 	public float md;
 
-	private Queue<PointInSpace> pointsInSpace = new Queue<PointInSpace>();
+    public GameObject inventoryMenu;
+
+    private Queue<PointInSpace> pointsInSpace = new Queue<PointInSpace>();
 
 	private void LateUpdate()
 	{
-		MoveCamera();
+        if (!inventoryMenu.activeSelf)
+		    MoveCamera();
 	}
 
 	public void MoveCamera()

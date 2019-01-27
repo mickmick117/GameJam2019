@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class evalFinalWall : MonoBehaviour
+public class OpenTheFkgTrap : MonoBehaviour
 {
-    public int maxInv;
-    private Inventory inv;
+    public Light light;
+
     // Start is called before the first frame update
     void Start()
     {
-        inv = Inventory.instance;
+        light.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (inv.items.Count >= maxInv)
+        if (light.isActiveAndEnabled)
         {
-            this.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }

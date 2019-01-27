@@ -8,6 +8,7 @@ public class InteractiveController : MonoBehaviour
     public string triggerEnterPrompt;
     public Renderer objectRenderer;
     public float outlineValue;
+    public Light light;
 
     private bool isPlayerInRange;
 
@@ -28,6 +29,7 @@ public class InteractiveController : MonoBehaviour
 
                 objectToPickup.SetActive(false);
                 TogglePlayerRangePrompt();
+                light.gameObject.SetActive(true);
             }
         }
     }
