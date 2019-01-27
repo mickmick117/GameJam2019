@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -23,6 +24,7 @@ public class MainMenuController : MonoBehaviour
         // TODO: Fade out sound
         // TODO: Give controls to player
         StartCoroutine(FadeCanvas(menuCanvas, 1f, 0f, fadeOutTime));
+		//SceneManager.LoadSceneAsync(1);
 		Cursor.lockState = CursorLockMode.Locked;
 	}
 
