@@ -12,6 +12,9 @@ TagManager:
   - Fire
   - JackInABox
   - Letter
+  - ProofOfOwnership
+  - LetterOwnership
+  - FinalLetter
   layers:
   - Default
   - TransparentFX

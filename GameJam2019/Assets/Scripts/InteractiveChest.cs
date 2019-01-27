@@ -24,6 +24,7 @@ public class InteractiveChest : MonoBehaviour
         {
             if (TogglePlayerRangePrompt() && Input.GetAxis("Interact") > 0.0f)
             {
+                Inventory.instance.addItem("FinalLetter");
                 chestToOpen.SetActive(false);
                 TogglePlayerRangePrompt();
                 GameManager.instance.OpenFinalRoom();
