@@ -240,7 +240,7 @@ RectTransform:
   m_GameObject: {fileID: 7691507149101853868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -3.5405369}
-  m_LocalScale: {x: 1.0181173, y: 5.7646875, z: 4.1540546}
+  m_LocalScale: {x: 3.4167874, y: 5.7646875, z: 4.1540546}
   m_Children: []
   m_Father: {fileID: 7691507148615792239}
   m_RootOrder: 0
@@ -323,8 +323,6 @@ MonoBehaviour:
   UnlockText: Press E to open
   prompt: {fileID: 8525106385728708169}
   anim: {fileID: 7691507149869995681}
-  numInvToWin: 6
-  door: {fileID: 7882665162248129652}
 --- !u!1 &7691507149869995680
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,12 +534,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 503c7d0647f771546a4f28a9e1a92057, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7563c3bd87fc0ce4fa544219e7802948, type: 3}
---- !u!1 &7882665162248129652 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 565592299579898255, guid: 7563c3bd87fc0ce4fa544219e7802948,
-    type: 3}
-  m_PrefabInstance: {fileID: 7691507149461157371}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &89731619522832379 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7747162704548532736, guid: 7563c3bd87fc0ce4fa544219e7802948,
