@@ -15,6 +15,7 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         inventoryMenu.SetActive(false);
         pauseMenu.SetActive(false);
     }
@@ -48,12 +49,14 @@ public class CharacterController : MonoBehaviour
 		{
             Time.timeScale = 0.0f;
 			Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             pauseMenu.SetActive(true);
         }
 
         if (Input.GetKeyDown("r") && !pauseMenu.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             inventoryMenu.SetActive(true);
         }
     }

@@ -35,6 +35,7 @@ public class InventoryMenuController : MonoBehaviour
         if (Input.GetKeyDown("r"))
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             inventoryMenu.SetActive(false);
         }
     }
