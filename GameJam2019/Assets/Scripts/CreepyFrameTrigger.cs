@@ -10,12 +10,19 @@ public class CreepyFrameTrigger : MonoBehaviour
     private float timeleft = 3.0f;
     private bool rotatesLeft = false;
 
+    private bool isSimonaquementBruyant = false;
+
     private void OnTriggerEnter(Collider other)
     {
+        if (!isSimonaquementBruyant)
+        {
+            isSimonaquementBruyant = true;
+            GetComponent<AudioSource>().Play();
+        }
+
         if (timeleft > 0)
         {
             isTriggering = true;
-            // TODO: make the frame shake
         }
     }
 
