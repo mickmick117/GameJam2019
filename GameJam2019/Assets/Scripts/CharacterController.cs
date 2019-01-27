@@ -11,7 +11,7 @@ public class CharacterController : MonoBehaviour
 
     void Start()
     {
-		Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Locked;
     }
     void Update()
     {
@@ -39,5 +39,10 @@ public class CharacterController : MonoBehaviour
 		{
 			Cursor.lockState = CursorLockMode.None;
 		}
-	}
+
+        if (Input.GetKeyDown("r"))
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
 }
