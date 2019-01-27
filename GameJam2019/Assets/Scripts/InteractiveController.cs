@@ -26,10 +26,13 @@ public class InteractiveController : MonoBehaviour
             if (TogglePlayerRangePrompt() && Input.GetAxis("Interact") > 0.0f)
             {
                 Inventory.instance.addItem(objectToPickup.tag);
-
+                Debug.Log(Inventory.instance.items.Count);
                 objectToPickup.SetActive(false);
                 TogglePlayerRangePrompt();
-                light.gameObject.SetActive(true);
+                if (light != null)
+                {
+                    light.gameObject.SetActive(true);
+                }
             }
         }
     }
