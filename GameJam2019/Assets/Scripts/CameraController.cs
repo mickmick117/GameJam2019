@@ -23,12 +23,13 @@ public class CameraController : MonoBehaviour
 	public float md;
 
     public GameObject inventoryMenu;
+    public GameObject pauseMenu;
 
     private Queue<PointInSpace> pointsInSpace = new Queue<PointInSpace>();
 
 	private void LateUpdate()
 	{
-        if (!inventoryMenu.activeSelf)
+        if (!inventoryMenu.activeSelf && !pauseMenu.activeSelf)
 		    MoveCamera();
 	}
 

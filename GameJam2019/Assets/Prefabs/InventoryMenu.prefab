@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8967759098351628677}
   m_Layer: 5
   m_Name: BtnProofOfOwnership
-  m_TagString: Untagged
+  m_TagString: ProofOfOwnership
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 8967759098458571126}
   m_Layer: 5
   m_Name: BtnLetter
-  m_TagString: Untagged
+  m_TagString: Letter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 8967759099397558984}
   m_Layer: 5
   m_Name: BtnJackInTheBox
-  m_TagString: Untagged
+  m_TagString: JackInABox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

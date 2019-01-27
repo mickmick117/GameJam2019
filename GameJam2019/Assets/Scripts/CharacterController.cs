@@ -9,11 +9,13 @@ public class CharacterController : MonoBehaviour
 	private float walking = 0f;
     public bool isWalking = false;
     public GameObject inventoryMenu;
+    public GameObject pauseMenu;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         inventoryMenu.SetActive(false);
+        pauseMenu.SetActive(false);
     }
 
     void Update()
@@ -40,10 +42,12 @@ public class CharacterController : MonoBehaviour
 
         if (Input.GetKeyDown("escape"))
 		{
+            Time.timeScale = 0.0f;
 			Cursor.lockState = CursorLockMode.None;
-		}
+            pauseMenu.SetActive(true);
+        }
 
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKeyDown("r") && !pauseMenu.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
             inventoryMenu.SetActive(true);
