@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +13,7 @@ public class FinalScene : MonoBehaviour
 	public Transform target;
 	public Transform character;
 	public CanvasGroup canvas;
+	public Image panel;
 	public float FadeDuration = 1.5f;
 
 	private float initialDistance = 0;
@@ -26,6 +27,7 @@ public class FinalScene : MonoBehaviour
 	private float iniRange;
 	public float multiplier = 25;
 	private bool changeScene = false;
+	public Text text;
 
 	private void Start()
 	{
@@ -71,9 +73,10 @@ public class FinalScene : MonoBehaviour
 
 	IEnumerator FadeOut()
 	{
-		while (canvas.alpha < 1)
+		while (panel.color.a < 1)
 		{
-			canvas.alpha += Time.deltaTime / FadeDuration;
+			//canvas.alpha += Time.deltaTime / FadeDuration;
+			panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, panel.color.a + Time.deltaTime / FadeDuration);
 			yield return null;
 		}
 		
@@ -81,8 +84,13 @@ public class FinalScene : MonoBehaviour
 
 	IEnumerator PlayText()
 	{
-		// joue ton texte Alexis
-		yield return null;
+		//text.color = Color.black;
+		text.text = "Before, I felt trapped. Jack's death bestowed darkness upon me.";
+		yield return new WaitForSeconds(4f);
+		text.text = "In reminiscence, we're finally together.";
+		yield return new WaitForSeconds(3f);
+		text.text = "He's my home and he means everything to me.";
+		yield return new WaitForSeconds(3f);
 	}
 
 	IEnumerator LoadScene(int sceneLevel)

@@ -15,6 +15,7 @@ public class InventoryMenuController : MonoBehaviour
     void Start()
     {
         ToggleMemoryImage(0.0f);
+        memoryImage.preserveAspect = true;
     }
 
     // Update is called once per frame
